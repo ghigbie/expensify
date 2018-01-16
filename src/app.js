@@ -32,5 +32,18 @@ class Action extends React.Component{
     }
 }
 
+class Options extends React.Component{
+    render(){
+        return(
+            <div>
+                <h3>Options:</h3>
+                <ol>
+                    <Option />
+                </ol>
+            </div>
+        );
+    }
+}
+
 const appRoot = document.getElementById('react-container');
 ReactDOM.render(<IndecisonApp />, appRoot);
