@@ -44,7 +44,7 @@ class Options extends React.Component{
             <div>
                 <h3>Options: {this.props.options.length}</h3>
                 <ol>
-                    <Option />
+                    <Option options={this.props.options}/>
                 </ol>
             </div>
         );
@@ -55,9 +55,9 @@ class Option extends React.Component{
     render(){
         return(
             <div>
-                <li>stuff to do</li>
-                <li>stuff to do</li>
-                <li>stuff to do</li>
+                <li>{this.props.options[0]}</li>
+                <li>{this.props.options[1]}</li>
+                <li>{this.props.options[2]}</li>
             </div>
         );
     }

@@ -124,7 +124,7 @@ var Options = function (_React$Component4) {
                 React.createElement(
                     'ol',
                     null,
-                    React.createElement(Option, null)
+                    React.createElement(Option, { options: this.props.options })
                 )
             );
         }
@@ -151,17 +151,17 @@ var Option = function (_React$Component5) {
                 React.createElement(
                     'li',
                     null,
-                    'stuff to do'
+                    this.props.options[0]
                 ),
                 React.createElement(
                     'li',
                     null,
-                    'stuff to do'
+                    this.props.options[1]
                 ),
                 React.createElement(
                     'li',
                     null,
-                    'stuff to do'
+                    this.props.options[2]
                 )
             );
         }
