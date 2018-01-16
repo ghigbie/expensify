@@ -1,12 +1,16 @@
 class IndecisonApp extends React.Component{
     render(){
+        const title = 'Indecision App';
+        const subtitle = 'Put your life in the hands of a computer';
+        const options = ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one'];
+        
         return(
             <div>
                 <Header 
-                    title="Indecison App"
-                    subtitle="Put your life in the hands of a computer"/>
+                    title={title}
+                    subtitle={subtitle}/>
                 <Action />
-                <Options />
+                <Options options={options}/>
                 <AddOption />
             </div>
         );
@@ -38,7 +42,7 @@ class Options extends React.Component{
     render(){
         return(
             <div>
-                <h3>Options:</h3>
+                <h3>Options: {this.options.length}</h3>
                 <ol>
                     <Option />
                 </ol>
