@@ -45,5 +45,17 @@ class Options extends React.Component{
     }
 }
 
+class Option extends React.Component{
+    render(){
+        return(
+            <div>
+                <li>stuff to do</li>
+                <li>stuff to do</li>
+                <li>stuff to do</li>
+            </div>
+        );
+    }
+}
+
 const appRoot = document.getElementById('react-container');
 ReactDOM.render(<IndecisonApp />, appRoot);
