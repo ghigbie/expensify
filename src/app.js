@@ -1,4 +1,4 @@
-class IndecisonApp extends React.Component{
+class IndecisionApp extends React.Component{
     render(){
         const title = 'Indecision App';
         const subtitle = 'Put your life in the hands of a computer';
@@ -8,9 +8,9 @@ class IndecisonApp extends React.Component{
             <div>
                 <Header 
                     title={title}
-                    subtitle={subtitle}/>
+                    subtitle={subtitle} />
                 <Action />
-                <Options options={options}/>
+                <Options options={options} />
                 <AddOption />
             </div>
         );
@@ -42,7 +42,7 @@ class Options extends React.Component{
     render(){
         return(
             <div>
-                <h3>Options: {this.options.length}</h3>
+                <h3>Options: {this.props.options.length}</h3>
                 <ol>
                     <Option />
                 </ol>
@@ -63,5 +63,13 @@ class Option extends React.Component{
     }
 }
 
+class AddOption extends React.Component{
+    render(){
+        return(
+            <h1>Add option here!</h1>
+        );
+    }
+}
+
 const appRoot = document.getElementById('react-container');
-ReactDOM.render(<IndecisonApp />, appRoot);
+ReactDOM.render(<IndecisionApp />, appRoot);
