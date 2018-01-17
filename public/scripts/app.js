@@ -22,7 +22,7 @@ var IndecisionApp = function (_React$Component) {
         value: function render() {
             var title = 'Indecision App';
             var subtitle = 'Put your life in the hands of a computer';
-            var options = ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Kill Bill'];
+            var options = ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Kill Bill', 'Go fishing'];
 
             return React.createElement(
                 'div',
@@ -124,7 +124,9 @@ var Options = function (_React$Component4) {
                 React.createElement(
                     'ol',
                     null,
-                    React.createElement(Option, { options: this.props.options })
+                    this.props.options.map(function (option) {
+                        return React.createElement(Option, { key: option, optionText: option });
+                    })
                 )
             );
         }
@@ -146,15 +148,9 @@ var Option = function (_React$Component5) {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'div',
+                'li',
                 null,
-                this.props.options.map(function (option) {
-                    return React.createElement(
-                        'li',
-                        { key: option },
-                        option
-                    );
-                })
+                this.props.optionText
             );
         }
     }]);

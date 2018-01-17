@@ -2,7 +2,7 @@ class IndecisionApp extends React.Component{
     render(){
         const title = 'Indecision App';
         const subtitle = 'Put your life in the hands of a computer';
-        const options = ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Kill Bill'];
+        const options = ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Kill Bill', 'Go fishing'];
         
         return(
             <div>
@@ -44,7 +44,9 @@ class Options extends React.Component{
             <div>
                 <h3>Options: {this.props.options.length}</h3>
                 <ol>
-                    <Option options={this.props.options}/>
+                    {
+                        this.props.options.map((option) => <Option key={option} optionText={option}/>)
+                    }
                 </ol>
             </div>
         );
@@ -54,11 +56,7 @@ class Options extends React.Component{
 class Option extends React.Component{
     render(){
         return(
-            <div>
-                {
-                this.props.options.map( (option) => <li key={option}>{option}</li>)
-                }
-            </div>
+            <li>{this.props.optionText}</li>
         );
     }
 }
