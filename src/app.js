@@ -29,6 +29,11 @@ class Header extends React.Component{
 }
 
 class Action extends React.Component{
+    constructor(props){
+        super(props);
+        this.handlePick = this.handlePick.bind(this);
+    }
+    
     handlePick(){
         let options = this.props.options;
         let random = Math.floor(Math.random(options.length));
@@ -46,9 +51,16 @@ class Action extends React.Component{
 }
 
 class Options extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleRemoveAll = this.handleRemoveAll.bind(this); //this ensures that the context is always correct
+    }
+    
     handleRemoveAll(){
         let options = this.props.options;
+        console.log(options);
         options = [];
+        console.log(options);
     }
     
     render(){
@@ -76,6 +88,11 @@ class Option extends React.Component{
 }
 
 class AddOption extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleAddOption = this.handleAddOption.bind(this);
+    }
+    
     handleAddOption(e){
         e.preventDefault();
         const option = e.target.elements.option.value.trim();
