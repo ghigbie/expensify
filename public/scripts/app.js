@@ -30,7 +30,7 @@ var IndecisionApp = function (_React$Component) {
                 React.createElement(Header, {
                     title: title,
                     subtitle: subtitle }),
-                React.createElement(Action, null),
+                React.createElement(Action, { options: options }),
                 React.createElement(Options, { options: options }),
                 React.createElement(AddOption, null)
             );
@@ -83,6 +83,13 @@ var Action = function (_React$Component3) {
     }
 
     _createClass(Action, [{
+        key: 'handlePick',
+        value: function handlePick() {
+            var options = this.props.options;
+            var random = Math.floor(Math.random(options.length));
+            alert(random);
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
@@ -90,7 +97,8 @@ var Action = function (_React$Component3) {
                 null,
                 React.createElement(
                     'button',
-                    null,
+                    {
+                        onClick: this.handlePick },
                     'What should I do?'
                 )
             );
@@ -110,6 +118,12 @@ var Options = function (_React$Component4) {
     }
 
     _createClass(Options, [{
+        key: 'handleRemoveAll',
+        value: function handleRemoveAll() {
+            var options = this.props.options;
+            options = [];
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
@@ -127,6 +141,12 @@ var Options = function (_React$Component4) {
                     this.props.options.map(function (option) {
                         return React.createElement(Option, { key: option, optionText: option });
                     })
+                ),
+                React.createElement(
+                    'button',
+                    { className: 'btn btn-danger',
+                        onClick: this.handleRemoveAll },
+                    'Remove All'
                 )
             );
         }

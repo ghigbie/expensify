@@ -9,7 +9,7 @@ class IndecisionApp extends React.Component{
                 <Header 
                     title={title}
                     subtitle={subtitle} />
-                <Action />
+                <Action options={options} />
                 <Options options={options} />
                 <AddOption />
             </div>
@@ -29,16 +29,28 @@ class Header extends React.Component{
 }
 
 class Action extends React.Component{
+    handlePick(){
+        let options = this.props.options;
+        let random = Math.floor(Math.random(options.length));
+        alert(random);
+    }
+    
     render(){
         return(
             <div>
-                <button>What should I do?</button>
+                <button
+                    onClick={this.handlePick}>What should I do?</button>
             </div>
         );
     }
 }
 
 class Options extends React.Component{
+    handleRemoveAll(){
+        let options = this.props.options;
+        options = [];
+    }
+    
     render(){
         return(
             <div>
@@ -48,6 +60,8 @@ class Options extends React.Component{
                         this.props.options.map((option) => <Option key={option} optionText={option}/>)
                     }
                 </ol>
+                <button className="btn btn-danger"
+                        onClick={this.handleRemoveAll}>Remove All</button>
             </div>
         );
     }
