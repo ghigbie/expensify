@@ -2,6 +2,7 @@ class IndecisionApp extends React.Component{
     constructor(props){
         super(props);
         this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
+        this.handlePickOption = this.handlePickOption.bind(this);
         this.state = {
             options: ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Kill Bill', 'Go fishing', 'Buy lisk']
         };
@@ -12,7 +13,7 @@ class IndecisionApp extends React.Component{
     }
     
     handlePickOption(){
-        let random = this.state.options[Math.floor(Math.random(this.state.options.length))];
+        let random = this.state.options[Math.floor(Math.random() * this.state.options.length)];
         alert(random);
     }
     
@@ -27,7 +28,7 @@ class IndecisionApp extends React.Component{
                     subtitle={subtitle} />
                     
                 <Action hasOptions={this.state.options.length > 0} 
-                        handlePickOption={this.state.handlePickOption}/>
+                        handlePickOption={this.handlePickOption}/>
                         
                 <Options options={this.state.options} 
                          handleDeleteOptions={this.handleDeleteOptions}/>
@@ -50,22 +51,11 @@ class Header extends React.Component{
 }
 
 class Action extends React.Component{
-    constructor(props){
-        super(props);
-        this.handlePick = this.handlePick.bind(this);
-    }
-    
-    handlePick(){
-        let options = this.props.options;
-        let random = Math.floor(Math.random(options.length));
-        alert(random);
-    }
-    
     render(){
         return(
             <div>
                 <button
-                    onClick={this.handlePick}
+                    onClick={this.props.handlePickOption}
                     className="btn btn-default"
                     disabled={!this.props.hasOptions}>What should I do?</button>
             </div>
