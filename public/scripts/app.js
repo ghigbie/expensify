@@ -11,18 +11,30 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var IndecisionApp = function (_React$Component) {
     _inherits(IndecisionApp, _React$Component);
 
-    function IndecisionApp() {
+    function IndecisionApp(props) {
         _classCallCheck(this, IndecisionApp);
 
-        return _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).call(this, props));
+
+        _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
+        _this.state = {
+            options: ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Kill Bill', 'Go fishing', 'Buy lisk']
+        };
+        return _this;
     }
 
     _createClass(IndecisionApp, [{
+        key: 'handleDeleteOptions',
+        value: function handleDeleteOptions() {
+            this.setState(function () {
+                return { options: [] };
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var title = 'Indecision App';
             var subtitle = 'Put your life in the hands of a computer';
-            var options = ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Kill Bill', 'Go fishing'];
 
             return React.createElement(
                 'div',
@@ -30,8 +42,9 @@ var IndecisionApp = function (_React$Component) {
                 React.createElement(Header, {
                     title: title,
                     subtitle: subtitle }),
-                React.createElement(Action, { options: options }),
-                React.createElement(Options, { options: options }),
+                React.createElement(Action, { hasOptions: this.state.options.length > 0 }),
+                React.createElement(Options, { options: this.state.options,
+                    removeOptions: this.handleDeleteOptions }),
                 React.createElement(AddOption, null)
             );
         }
@@ -101,7 +114,9 @@ var Action = function (_React$Component3) {
                 React.createElement(
                     'button',
                     {
-                        onClick: this.handlePick },
+                        onClick: this.handlePick,
+                        className: 'btn btn-default',
+                        disabled: !this.props.hasOptions },
                     'What should I do?'
                 )
             );
@@ -153,7 +168,7 @@ var Options = function (_React$Component4) {
                 React.createElement(
                     'button',
                     { className: 'btn btn-danger',
-                        onClick: this.handleRemoveAll },
+                        onClick: this.props.removeOptions },
                     'Remove All'
                 )
             );
