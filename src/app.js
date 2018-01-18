@@ -22,7 +22,7 @@ class IndecisionApp extends React.Component{
                     subtitle={subtitle} />
                 <Action hasOptions={this.state.options.length > 0} />
                 <Options options={this.state.options} 
-                         removeOptions={this.handleDeleteOptions}/>
+                         handleDeleteOptions={this.handleDeleteOptions}/>
                 <AddOption />
             </div>
         );
@@ -87,7 +87,7 @@ class Options extends React.Component{
                     }
                 </ol>
                 <button className="btn btn-danger"
-                        onClick={this.props.removeOptions}>Remove All</button>
+                        onClick={this.props.handleDeleteOptions}>Remove All</button>
             </div>
         );
     }

@@ -44,7 +44,7 @@ var IndecisionApp = function (_React$Component) {
                     subtitle: subtitle }),
                 React.createElement(Action, { hasOptions: this.state.options.length > 0 }),
                 React.createElement(Options, { options: this.state.options,
-                    removeOptions: this.handleDeleteOptions }),
+                    handleDeleteOptions: this.handleDeleteOptions }),
                 React.createElement(AddOption, null)
             );
         }
@@ -168,7 +168,7 @@ var Options = function (_React$Component4) {
                 React.createElement(
                     'button',
                     { className: 'btn btn-danger',
-                        onClick: this.props.removeOptions },
+                        onClick: this.props.handleDeleteOptions },
                     'Remove All'
                 )
             );
