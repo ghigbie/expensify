@@ -31,6 +31,12 @@ var IndecisionApp = function (_React$Component) {
             });
         }
     }, {
+        key: 'handlePickOption',
+        value: function handlePickOption() {
+            var random = this.state.options[Math.floor(Math.random(this.state.options.length))];
+            alert(random);
+        }
+    }, {
         key: 'render',
         value: function render() {
             var title = 'Indecision App';
@@ -42,7 +48,8 @@ var IndecisionApp = function (_React$Component) {
                 React.createElement(Header, {
                     title: title,
                     subtitle: subtitle }),
-                React.createElement(Action, { hasOptions: this.state.options.length > 0 }),
+                React.createElement(Action, { hasOptions: this.state.options.length > 0,
+                    handlePickOption: this.state.handlePickOption }),
                 React.createElement(Options, { options: this.state.options,
                     handleDeleteOptions: this.handleDeleteOptions }),
                 React.createElement(AddOption, null)
@@ -129,24 +136,13 @@ var Action = function (_React$Component3) {
 var Options = function (_React$Component4) {
     _inherits(Options, _React$Component4);
 
-    function Options(props) {
+    function Options() {
         _classCallCheck(this, Options);
 
-        var _this4 = _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).call(this, props));
-
-        _this4.handleRemoveAll = _this4.handleRemoveAll.bind(_this4); //this ensures that the context is always correct
-        return _this4;
+        return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
     }
 
     _createClass(Options, [{
-        key: 'handleRemoveAll',
-        value: function handleRemoveAll() {
-            var options = this.props.options;
-            console.log(options);
-            options = [];
-            console.log(options);
-        }
-    }, {
         key: 'render',
         value: function render() {
             return React.createElement(

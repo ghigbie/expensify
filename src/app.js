@@ -11,6 +11,11 @@ class IndecisionApp extends React.Component{
         this.setState(() => ({options: []}));
     }
     
+    handlePickOption(){
+        let random = this.state.options[Math.floor(Math.random(this.state.options.length))];
+        alert(random);
+    }
+    
     render(){
         const title = 'Indecision App';
         const subtitle = 'Put your life in the hands of a computer';
@@ -20,9 +25,13 @@ class IndecisionApp extends React.Component{
                 <Header 
                     title={title}
                     subtitle={subtitle} />
-                <Action hasOptions={this.state.options.length > 0} />
+                    
+                <Action hasOptions={this.state.options.length > 0} 
+                        handlePickOption={this.state.handlePickOption}/>
+                        
                 <Options options={this.state.options} 
                          handleDeleteOptions={this.handleDeleteOptions}/>
+                         
                 <AddOption />
             </div>
         );
@@ -65,18 +74,6 @@ class Action extends React.Component{
 }
 
 class Options extends React.Component{
-    constructor(props){
-        super(props);
-        this.handleRemoveAll = this.handleRemoveAll.bind(this); //this ensures that the context is always correct
-    }
-    
-    handleRemoveAll(){
-        let options = this.props.options;
-        console.log(options);
-        options = [];
-        console.log(options);
-    }
-    
     render(){
         return(
             <div>
