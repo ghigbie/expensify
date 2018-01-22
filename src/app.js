@@ -63,18 +63,16 @@ const Header = (props) => {
     );
 };
 
-class Action extends React.Component{
-    render(){
-        return(
-            <div>
-                <button
-                    onClick={this.props.handlePickOption}
-                    className="btn btn-default"
-                    disabled={!this.props.hasOptions}>What should I do?</button>
-            </div>
-        );
-    }
-}
+const Action = (props) => {
+    return(
+        <div>
+            <button
+                onClick={props.handlePickOption}
+                className="btn btn-default"
+                disabled={!props.hasOptions}>What should I do?</button>
+        </div>
+    );  
+};
 
 class Options extends React.Component{
     render(){
