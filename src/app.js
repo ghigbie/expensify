@@ -89,17 +89,12 @@ const Options = (props) => {
     );
 };
 
-
-
-class Option extends React.Component{
-    render(){
-        return(
-            <li>{this.props.optionText}</li>
-        );
-    }
-}
-
-
+const Option = (props) => {
+    return(
+        <li>{props.optionText}</li>    
+    );
+        
+};
 
 class AddOption extends React.Component{
     constructor(props){
