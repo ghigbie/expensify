@@ -24,11 +24,7 @@ class IndecisionApp extends React.Component{
         }else if(this.state.options.indexOf(option) > -1){ //index of returns a -1 if the option already exists
             return 'This option already exists. Please enter a valid value';
         }else{
-            this.setState((prevState) => {
-                return {
-                    options: prevState.options.concat(option)
-                };
-            });
+            this.setState((prevState) => ({options: prevState.options.concat(option)}));
         }
     }
     
@@ -110,11 +106,7 @@ class AddOption extends React.Component{
         const option = e.target.elements.option.value.trim();
         const error = this.props.handleAddOption(option);
         
-        this.setState(() => {
-            return {
-                error: error
-            };
-        });
+        this.setState(() => ({error: error}));
         document.getElementById('option-form').reset();
         
     }
