@@ -75,7 +75,14 @@ var IndecisionApp = function (_React$Component) {
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            console.log("fetching data");
+            var json = localStorage.getItem('options');
+            var options = JSON.parse(json);
+            if (options) {
+                this.setState(function () {
+                    return { options: options };
+                });
+                console.log("fetching data");
+            }
         }
     }, {
         key: 'componentDidUpdate',
