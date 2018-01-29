@@ -16,12 +16,11 @@ class IndecisionApp extends React.Component{
     }
     
     //this removes ONE option
-    handleDeleteOption(){
+    handleDeleteOption(optionToRemove){
         console.log("HDO called");
         this.setState((prevState) => ({
-            options: prevState.options((option) => {
-                return false; //return false to remove an item from an array, and return true to kep an item in array
-            })
+            //return false to remove an item from an array, and return true to kep an item in array, in this case it I want it to be false
+            options: prevState.options.filter((option) =>  optionToRemove !== option)
         }));
     }
     

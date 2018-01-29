@@ -41,12 +41,13 @@ var IndecisionApp = function (_React$Component) {
 
     }, {
         key: 'handleDeleteOption',
-        value: function handleDeleteOption() {
+        value: function handleDeleteOption(optionToRemove) {
             console.log("HDO called");
             this.setState(function (prevState) {
                 return {
-                    options: prevState.options(function (option) {
-                        return false; //return false to remove an item from an array, and return true to kep an item in array
+                    //return false to remove an item from an array, and return true to kep an item in array, in this case it I want it to be false
+                    options: prevState.options.filter(function (option) {
+                        return optionToRemove !== option;
                     })
                 };
             });
