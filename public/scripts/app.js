@@ -75,12 +75,26 @@ var IndecisionApp = function (_React$Component) {
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            console.log("Component did mount called");
+            console.log("fetching data");
         }
     }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(preProps, prevState) {
-            console.log("Component did update called");
+            console.log("saving data");
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps, prevState) {
+            if (prevState.options.length !== this.state.options.length) {
+                var json = JSON.stringify(this.state.options);
+                localStorage.setItem('options', json);
+                console.log("saving data");
+            }
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            console.log("Component will unmount called");
         }
     }, {
         key: 'render',
