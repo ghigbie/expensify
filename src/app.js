@@ -2,7 +2,7 @@ class IndecisionApp extends React.Component{
     constructor(props){
         super(props);
         this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-        this.handleDeleteOption = this.handleDeleteOption(this);
+        this.handleDeleteOption = this.handleDeleteOption.bind(this);
         this.handlePickOption = this.handlePickOption.bind(this);
         this.handleAddOption = this.handleAddOption.bind(this);
         this.state = {
@@ -17,7 +17,7 @@ class IndecisionApp extends React.Component{
     
     //this removes ONE option
     handleDeleteOption(){
-        
+        console.log("HDO called");
     }
     
     handlePickOption(){
@@ -101,7 +101,10 @@ const Option = (props) => {
         <div>
             {props.optionText}  
             <button className="btn btn-default"
-                    onClick={props.handleDeleteOption}>Remove</button>
+                    onClick={(e) => {
+                        props.handleDeleteOption(props.optionText);
+                        
+                    }}>Remove</button>
         </div>
     );
         

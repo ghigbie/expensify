@@ -17,7 +17,7 @@ var IndecisionApp = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).call(this, props));
 
         _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
-        _this.handleDeleteOption = _this.handleDeleteOption(_this);
+        _this.handleDeleteOption = _this.handleDeleteOption.bind(_this);
         _this.handlePickOption = _this.handlePickOption.bind(_this);
         _this.handleAddOption = _this.handleAddOption.bind(_this);
         _this.state = {
@@ -41,7 +41,9 @@ var IndecisionApp = function (_React$Component) {
 
     }, {
         key: 'handleDeleteOption',
-        value: function handleDeleteOption() {}
+        value: function handleDeleteOption() {
+            console.log("HDO called");
+        }
     }, {
         key: 'handlePickOption',
         value: function handlePickOption() {
@@ -151,7 +153,9 @@ var Option = function Option(props) {
         React.createElement(
             'button',
             { className: 'btn btn-default',
-                onClick: props.handleDeleteOption },
+                onClick: function onClick(e) {
+                    props.handleDeleteOption(props.optionText);
+                } },
             'Remove'
         )
     );
