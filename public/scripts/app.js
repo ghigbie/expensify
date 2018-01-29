@@ -43,6 +43,13 @@ var IndecisionApp = function (_React$Component) {
         key: 'handleDeleteOption',
         value: function handleDeleteOption() {
             console.log("HDO called");
+            this.setState(function (prevState) {
+                return {
+                    options: prevState.options(function (option) {
+                        return false; //return false to remove an item from an array, and return true to kep an item in array
+                    })
+                };
+            });
         }
     }, {
         key: 'handlePickOption',
