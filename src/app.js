@@ -40,11 +40,15 @@ class IndecisionApp extends React.Component{
     }
     
     componentDidMount(){
-        const json = localStorage.getItem('options');
-        const options = JSON.parse(json);
-        if(options){
-            this.setState(() => ({options: options}));
-            console.log("fetching data");
+        try{
+            const json = localStorage.getItem('options');
+            const options = JSON.parse(json);
+            if(options){
+                this.setState(() => ({options: options}));
+                console.log("fetching data");
+            }
+        }catch(e){
+            
         }
     }
     
@@ -111,6 +115,7 @@ const Options = (props) => {
     return(
             <div>
                 <h3>Options: {props.options.length}</h3>
+                {props.options.length === 0 && <p>Please add an option to get started!</p>}
                 
                     {
                         props.options.map((option) => (
@@ -155,6 +160,10 @@ class AddOption extends React.Component{
         
         this.setState(() => ({error: error}));
         document.getElementById('option-form').reset();
+        
+        if(!error){
+            e.target.elements.option.value = '';
+        }
         
     }
     
