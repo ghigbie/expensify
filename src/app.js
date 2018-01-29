@@ -39,6 +39,14 @@ class IndecisionApp extends React.Component{
         }
     }
     
+    componentDidMount(){
+        console.log("Component did mount called");
+    }
+    
+    componentDidUpdate(preProps, prevState){
+        console.log("Component did update called");
+    }
+    
     render(){
         const title = 'Indecision App';
         const subtitle = 'Put your life in the hands of a computer';

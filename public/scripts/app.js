@@ -73,6 +73,16 @@ var IndecisionApp = function (_React$Component) {
             }
         }
     }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            console.log("Component did mount called");
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(preProps, prevState) {
+            console.log("Component did update called");
+        }
+    }, {
         key: 'render',
         value: function render() {
             var title = 'Indecision App';
