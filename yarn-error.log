@@ -1,5 +1,5 @@
 Arguments: 
-  /home/ubuntu/.nvm/versions/node/v6.11.2/bin/node /home/ubuntu/.nvm/versions/node/v6.11.2/bin/yarn add babel-cli@6.24.1
+  /home/ubuntu/.nvm/versions/node/v6.11.2/bin/node /home/ubuntu/.nvm/versions/node/v6.11.2/bin/yarn serve
 
 PATH: 
   /home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin
@@ -21,14 +21,19 @@ npm manifest:
     "repository": "https://github.com/ghigbie/Indecision-app-reboot.git",
     "author": "George Higbie <gehigbie@gmail.com>",
     "license": "MIT",
+    "scripts":{
+      "serve": "live-server public/",
+      "build": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    }
     "dependencies": {
-      "babel-cli": "^6.26.0",
+      "babel-cli": "6.24.1",
       "babel-preset-env": "1.5.2",
       "babel-preset-react": "6.24.1",
       "bootstrap": "3.3.7",
       "live-server": "^1.2.0",
       "react": "16.0.0",
       "react-dom": "16.0.0"
+    }
   }
 
 yarn manifest: 
@@ -2121,7 +2126,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 Trace: 
-  SyntaxError: /home/ubuntu/workspace/version2-indecision-app/package.json: Unexpected end of JSON input
+  SyntaxError: /home/ubuntu/workspace/version2-indecision-app/package.json: Unexpected string in JSON at position 374
       at Object.parse (native)
       at /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/yarn/lib/cli.js:770:59
       at next (native)
