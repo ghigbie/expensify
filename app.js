@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AddOption from './components/AddOption';
+import Option from './components/Option';
 
 class IndecisionApp extends React.Component{
     constructor(props){
@@ -147,45 +149,45 @@ const Option = (props) => {
         
 };
 
-class AddOption extends React.Component{
-    constructor(props){
-        super(props);
-        this.handleAddOption = this.handleAddOption.bind(this);
-        this.state = {
-            error: undefined
-        };
-    }
+// class AddOption extends React.Component{
+//     constructor(props){
+//         super(props);
+//         this.handleAddOption = this.handleAddOption.bind(this);
+//         this.state = {
+//             error: undefined
+//         };
+//     }
     
-    handleAddOption(e){
-        e.preventDefault();
-        const option = e.target.elements.option.value.trim();
-        const error = this.props.handleAddOption(option);
+//     handleAddOption(e){
+//         e.preventDefault();
+//         const option = e.target.elements.option.value.trim();
+//         const error = this.props.handleAddOption(option);
         
-        this.setState(() => ({error: error}));
-        document.getElementById('option-form').reset();
+//         this.setState(() => ({error: error}));
+//         document.getElementById('option-form').reset();
         
-        if(!error){
-            e.target.elements.option.value = '';
-        }
+//         if(!error){
+//             e.target.elements.option.value = '';
+//         }
         
-    }
+//     }
     
-    render(){
-        return(
-            <div>
-                {this.state.error && <h3>{this.state.error}</h3>}
-                <h1>Add option here!</h1>
-                <form className="form"
-                      id="option-form"
-                      onSubmit={this.handleAddOption}>
-                    <input type="text" 
-                           name="option"/>
-                    <button className="btn btn-default">Add Option</button>
-                </form>
-            </div>
-        );
-    }
-}
+//     render(){
+//         return(
+//             <div>
+//                 {this.state.error && <h3>{this.state.error}</h3>}
+//                 <h1>Add option here!</h1>
+//                 <form className="form"
+//                       id="option-form"
+//                       onSubmit={this.handleAddOption}>
+//                     <input type="text" 
+//                           name="option"/>
+//                     <button className="btn btn-default">Add Option</button>
+//                 </form>
+//             </div>
+//         );
+//     }
+// }
 
 
 const appRoot = document.getElementById('react-container');
