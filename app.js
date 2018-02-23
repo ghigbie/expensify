@@ -135,19 +135,19 @@ const Options = (props) => {
     );
 };
 
-const Option = (props) => {
-    return(
-        <div>
-            {props.optionText}  
-            <button className="btn btn-default"
-                    onClick={(e) => {
-                        props.handleDeleteOption(props.optionText);
+// const Option = (props) => {
+//     return(
+//         <div>
+//             {props.optionText}  
+//             <button className="btn btn-default"
+//                     onClick={(e) => {
+//                         props.handleDeleteOption(props.optionText);
                         
-                    }}>Remove</button>
-        </div>
-    );
+//                     }}>Remove</button>
+//         </div>
+//     );
         
-};
+// };
 
 // class AddOption extends React.Component{
 //     constructor(props){
