@@ -97,25 +97,6 @@ class IndecisionApp extends React.Component{
     }
 }
 
-const Header = (props) => {
-    return(
-        <div>
-            <h1>{props.title}</h1>
-            <h2>{props.subtitle}</h2>
-        </div>
-    );
-};
-
-const Action = (props) => {
-    return(
-        <div>
-            <button
-                onClick={props.handlePickOption}
-                className="btn btn-default"
-                disabled={!props.hasOptions}>What should I do?</button>
-        </div>
-    );  
-};
 
 const Options = (props) => {
     return(
