@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import IndecisionApp from 'Components/IndecisionApp';
+
 import AddOption from './components/AddOption';
 
 class IndecisionApp extends React.Component{
