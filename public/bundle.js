@@ -65,10 +65,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
+throw new Error("Module parse failed: /home/ubuntu/workspace/version2-indecision-app/src/index.js Unexpected token (7:16)\nYou may need an appropriate loader to handle this file type.\n| \n| const appRoot = document.getElementById('react-container');\n| ReactDOM.render(<IndecisionApp />, appRoot);");
 
 /***/ })
 /******/ ]);
