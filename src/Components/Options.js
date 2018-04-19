@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Option from './Option/Option';
+import Option from './Option';
 
 const Options = (props) => {
   return(
@@ -9,7 +9,7 @@ const Options = (props) => {
             {props.options.length === 0 && <p> Please add an option to get started! </p>}
             
             {
-                props.options.mapp((option) => (
+                props.options.map((option) => (
                     <Option key={option}
                             optionText={option}
                             handleDeletionOption={props.handleDeletionOption} />))

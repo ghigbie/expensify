@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Action from './Action';
+import AddOption from './AddOption';
 import Header from './Header';
 import Options from './Options';
 
