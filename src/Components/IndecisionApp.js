@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 
+import Action from './Action';
+import Header from './Header';
+import Options from './Options';
+
 class IndecisionApp extends Component{
     constructor(props){
         super(props);
