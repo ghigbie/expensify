@@ -8,7 +8,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --watch",
-    "build-babel": "babel src/index.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "dev-server": "webpack-dev-server"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -22,6 +22,7 @@
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "style-loader": "0.18.2",
-    "webpack": "3.1.0"
+    "webpack": "3.1.0",
+    "webpack-dev-server": "2.5.1"
   }
 }
