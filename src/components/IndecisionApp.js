@@ -8,7 +8,20 @@ class IndecisionApp extends Component{
     
     render(){
         return(
-            
+            <div>
+                <Header 
+                    title={title}
+                    subtitle={subtitle} />
+                    
+                <Action hasOptions={this.state.options.length > 0} 
+                        handlePickOption={this.handlePickOption}/>
+                        
+                <Options options={this.state.options} 
+                         handleDeleteOptions={this.handleDeleteOptions}
+                         handleDeleteOption={this.handleDeleteOption}/>
+                         
+                <AddOption handleAddOption={this.handleAddOption}/>
+            </div>
         );
     }
 }
