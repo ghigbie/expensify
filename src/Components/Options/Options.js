@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Option from './Option/Option';
+import Option from './../Option/Option';
 
 const Options = (props) => (
     <div>
