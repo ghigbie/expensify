@@ -1,10 +1,15 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-const OptionModal = () => (
-    <div>
+const OptionModal = (props) => (
+    <Modal
+        isOpen={!!props.selectedOption}
+        contentLable="Selected Option">
        <h3>Selected Option</h3>    
-    </div>
+       {props.selectedOption && <p>{props.selectedOption}</p>}
+       <button onClick={props.clearModal}
+                >Okay</button>
+    </Modal>
 );
 
 export default OptionModal;
