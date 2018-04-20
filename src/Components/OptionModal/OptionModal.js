@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 
 const OptionModal = () => (
     <div>
-       Some text     
+       <h3>Selected Option</h3>    
     </div>
 );
 

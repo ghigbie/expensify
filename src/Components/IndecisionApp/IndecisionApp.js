@@ -14,7 +14,8 @@ class IndecisionApp extends Component{
         this.handlePickOption = this.handlePickOption.bind(this);
         this.handleAddOption = this.handleAddOption.bind(this);
         this.state = {
-            options: ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Go fishing', 'Buy lisk']
+            options: ['Go hunting', 'Walk the dog', 'Wash the dishes', 'Find the chosen one', 'Go fishing', 'Buy lisk'],
+            selectedOption: undefined
         };  
     }
     
@@ -32,9 +33,11 @@ class IndecisionApp extends Component{
         }));
     }
     
+    //this selects an option
     handlePickOption(){
         let random = this.state.options[Math.floor(Math.random() * this.state.options.length)];
         alert(random);
+        this.setState(() => ({selectedOption: random}));
     }
     
     handleAddOption(option){
@@ -95,7 +98,7 @@ class IndecisionApp extends Component{
                          
                 <AddOption handleAddOption={this.handleAddOption}/>
                 
-                <OptionModal />
+                <OptionModal selectedOption={this.state.selectedOption}/>
             </div>
         );
     }
