@@ -103,7 +103,7 @@ class IndecisionApp extends Component{
                 <AddOption handleAddOption={this.handleAddOption}/>
                 
                 <OptionModal selectedOption={this.state.selectedOption}
-                             clearModal={this.handleClearSelectedOption}/>
+                             handleClearSelectedOption={this.handleClearSelectedOption}/>
             </div>
         );
     }
