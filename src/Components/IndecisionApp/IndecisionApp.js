@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 
-import Action from './Action/Action';
-import AddOption from './AddOption/AddOption';
-import Header from './Header/Header';
-import Options from './Options/Options';
+import Action from './../Action/Action';
+import AddOption from './../AddOption/AddOption';
+import Header from './../Header/Header';
+import Options from './../Options/Options';
+import OptionModal from './../OptionModal/OptionModal';
 
 class IndecisionApp extends Component{
     constructor(props){
@@ -93,6 +94,8 @@ class IndecisionApp extends Component{
                          handleDeleteOption={this.handleDeleteOption}/>
                          
                 <AddOption handleAddOption={this.handleAddOption}/>
+                
+                <OptionModal />
             </div>
         );
     }
