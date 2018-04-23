@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import IndecisionApp from './Components/IndecisionApp/IndecisionApp';
+import './styles/styles.scss';
 
 
 const appRoot = document.getElementById('react-container');
