@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './IndecisionApp.css';
+import './../../styles/styles.scss';
 
 import Action from './../Action/Action';
 import AddOption from './../AddOption/AddOption';
