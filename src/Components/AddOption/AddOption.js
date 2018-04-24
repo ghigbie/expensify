@@ -33,7 +33,7 @@ class AddOption extends React.Component{
                       onSubmit={this.handleAddOption}>
                     <input type="text" 
                            name="option"/>
-                    <button className="btn btn-default">Add Option</button>
+                    <button className="btn btn-default button">Add Option</button>
                 </form>
             </div>
         );
