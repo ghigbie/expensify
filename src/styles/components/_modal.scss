@@ -1,0 +1,27 @@
+.ReactModalPortal > div {
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Orverlay{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity 200ms east-in-out;
+}
+
+.ReactModalPortal .ReactModal__after-open{
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__before-close{
+    opacity: 0;
+}
+
+.modal{
+    background: $ligh-blue-background;
+    color: #fff
+    max-width: 30rem;
+    outline: none;
+    padding: $l-size;
+    text-align: center;
+}
