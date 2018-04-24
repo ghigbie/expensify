@@ -520,7 +520,7 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
 /* 66 */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed: \\n    max-width: 30rem;\\n   ^\\n      Invalid CSS after \\\"    max-width\\\": expected \\\"}\\\", was \\\": 30rem;\\\"\\n      in /home/ubuntu/workspace/version2-indecision-app/src/styles/components/_modal.scss (line 23, column 5)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNjYuanMiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///66\n");
+eval("throw new Error(\"Module build failed: \\n    background: $ligh-blue-background;\\n               ^\\n      Undefined variable: \\\"$ligh-blue-background\\\".\\n      in /home/ubuntu/workspace/version2-indecision-app/src/styles/components/_modal.scss (line 21, column 17)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNjYuanMiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///66\n");
 
 /***/ })
 /******/ ]);
