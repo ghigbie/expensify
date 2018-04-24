@@ -14,7 +14,7 @@ const Options = (props) => (
                         handleDeletionOption={props.handleDeletionOption} />))
         }
             
-        <button className="but btn-outline-danger"
+        <button className="but btn-outline-danger button--link"
                 onClick={props.handleDeletionOption}>Remove All</button>
     </div>
 );  
