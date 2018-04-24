@@ -4,7 +4,9 @@ import Option from './../Option/Option';
 
 const Options = (props) => (
     <div>
-        <h3>Options {props.options.length}</h3>
+        <button className="but btn-outline-danger button button--link"
+                onClick={props.handleDeletionOption}>Remove All</button>
+        
         {props.options.length === 0 && <p> Please add an option to get started! </p>}
             
         {
@@ -13,9 +15,6 @@ const Options = (props) => (
                         optionText={option}
                         handleDeletionOption={props.handleDeletionOption} />))
         }
-            
-        <button className="but btn-outline-danger button--link"
-                onClick={props.handleDeletionOption}>Remove All</button>
     </div>
 );  
 
