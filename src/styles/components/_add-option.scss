@@ -14,5 +14,8 @@
     flex-grow: 1;
     background: $dark-blue;
     border: none;
+    color: $off-white;
     border-bottom: .3rem solid darken($dark-blue, 10%);
+    margin-right: $s-size;
+    padding: $s-size;
 }
