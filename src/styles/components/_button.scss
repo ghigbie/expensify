@@ -1,0 +1,11 @@
+.button__choice{
+    background: $light-blue;
+    border: none;
+    border-bottom: .6rem solid darken($light-blue, 10%);
+    color: #fff;
+    font-style: bold;
+    font-size: $l-size;
+    width: 100%;
+    margin-bottom: $xl-size;
+    padding: 10%;
+}
