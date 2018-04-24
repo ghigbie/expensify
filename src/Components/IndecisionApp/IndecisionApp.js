@@ -28,7 +28,6 @@ class IndecisionApp extends Component{
     
     //this removes ONE option
     handleDeleteOption(optionToRemove){
-        console.log("HDO called");
         this.setState((prevState) => ({
             //return false to remove an item from an array, and return true to kep an item in array, in this case it I want it to be false
             options: prevState.options.filter((option) =>  optionToRemove !== option)
@@ -67,22 +66,14 @@ class IndecisionApp extends Component{
             
         }
     }
-    
-    componentDidUpdate(preProps, prevState){
-        console.log("saving data");
-    }
-    
+
     componentDidUpdate(prevProps, prevState){
         if(prevState.options.length !== this.state.options.length){
             const json = JSON.stringify(this.state.options);
             localStorage.setItem('options', json);
-            console.log("saving data");
         }
     }
-    
-    componentWillUnmount(){
-        console.log("Component will unmount called");
-    }
+
     
     render(){
         const title = 'Indecision App';
