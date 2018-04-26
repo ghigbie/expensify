@@ -4,7 +4,7 @@ const Action = (props) => (
     <div>
         <button
             onClick={props.handlePickOption}
-            className="button__choice"
+            className="btn btn-default button__choice"
             disabled={!props.hasOptions}>What should I do?</button>
     </div>
 );  
