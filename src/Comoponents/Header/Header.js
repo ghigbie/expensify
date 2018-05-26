@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from  'react-router-dom';
 
-class AddExpensePage extends Component{
+class Header extends Component{
     reder(){
         return(
             <div>
@@ -14,4 +14,4 @@ class AddExpensePage extends Component{
     }
 }
 
-export default AddExpensePage;
+export default Header;
