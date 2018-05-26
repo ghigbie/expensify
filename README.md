@@ -1,3 +1,3 @@
-# Indecision App Reboot
+# Expensify App 
 
-This is a ReactJS app that helps users make decisions.
+This is a ReactJS app that is used for reporting expenses.
