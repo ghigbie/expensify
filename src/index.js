@@ -6,4 +6,4 @@ import './styles/styles.scss';
 
 
 const appRoot = document.getElementById('react-container');
-ReactDOM.render(<IndecisionApp />, appRoot);
+ReactDOM.render(<ExpensifyApp />, appRoot);
