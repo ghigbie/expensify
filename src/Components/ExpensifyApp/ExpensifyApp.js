@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import Header from './../Header/Header';
 
 //Routes
-import ExpenseDashboardPage from './../Routes/ExpenseDashboardPage/ExpenseDashboardPage';
-import AddExpensePage from './../Routes/AddExpensePage/AddExpensePage';
-import EditExpensePage from './../Routes/EditExpensePage/EditExpensePage';
-import HelpPage from './../Routes/HelpPage/HelpPage';
-import NotFoundPage from './../NotFoundPage/NotFoundPage';
+import ExpenseDashboardPage from './../../Routes/ExpenseDashboardPage/ExpenseDashboardPage';
+import AddExpensePage from './../../Routes/AddExpensePage/AddExpensePage';
+import EditExpensePage from './../../Routes/EditExpensePage/EditExpensePage';
+import HelpPage from './../../Routes/HelpPage/HelpPage';
+import NotFoundPage from './../../Routs/NotFoundPage/NotFoundPage';
 
 
 class ExpensifyApp extends Component{
@@ -16,6 +17,7 @@ class ExpensifyApp extends Component{
             <div>
                 <h1>Expensify App</h1>
                 <BrowserRouter>
+                    <Header />
                     <Switch>
                         <Route path="/" component={ExpenseDashboardPage} />
                         <Route path="/create" component={AddExpensePage} />
