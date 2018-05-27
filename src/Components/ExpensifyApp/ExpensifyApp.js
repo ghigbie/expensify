@@ -21,11 +21,11 @@ class ExpensifyApp extends Component{
                     <div>
                         <Header />
                         <Switch>
-                            <Route path="/" component={ExpenseDashboardPage} />
+                            <Route path="/" exact={true} component={ExpenseDashboardPage} />
                             <Route path="/create" component={AddExpensePage} />
                             <Route path="/edit" component={EditExpensePage} />
                             <Route path="/help" component={HelpPage} />
-                            <route component={NotFoundPage} />
+                            <Route component={NotFoundPage} />
                         </Switch>
                     </div>
                 </BrowserRouter>

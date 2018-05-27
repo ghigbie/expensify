@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class HelpPage extends Component{
-    reder(){
+    render(){
         return(
             <div>
                 <h1>Help Page</h1>
