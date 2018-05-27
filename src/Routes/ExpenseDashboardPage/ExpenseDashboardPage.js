@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class ExpenseDashboardPage extends Component{
-    reder(){
+    render(){
         return(
             <div>
                 <h1>Expense Dashborad Page</h1>
