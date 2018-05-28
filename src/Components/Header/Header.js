@@ -9,7 +9,7 @@ const Header = () =>
         <NavLink to="/create"
                  activeClassName={"is-active"}>Add New Expense</NavLink>
         <NavLink to="/edit"
-                 activeClassName={"is-active"}>Exit Expense</NavLink>
+                 activeClassName={"is-active"}>Edit Expense</NavLink>
         <NavLink to="/help"
                  activeClassName={"is-active"}>Get Help</NavLink>
     </div>);
